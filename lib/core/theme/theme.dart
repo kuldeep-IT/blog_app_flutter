@@ -12,11 +12,21 @@ class AppTheme {
 
   static final darkThemeMode = ThemeData.dark().copyWith(
     scaffoldBackgroundColor: AppPallete.backgroundColor,
-    appBarTheme: AppBarTheme(backgroundColor: AppPallete.backgroundColor),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppPallete.backgroundColor,
+    ),
     inputDecorationTheme: InputDecorationTheme(
       contentPadding: EdgeInsets.all(27),
       enabledBorder: _border(),
       focusedBorder: _border(AppPallete.gradient1),
+      errorBorder: _border(),
+      border: _border(),
+    ),
+    chipTheme: const ChipThemeData(
+      color: WidgetStatePropertyAll(
+        AppPallete.backgroundColor,
+      ),
+      side: BorderSide.none,
     ),
   );
 }
